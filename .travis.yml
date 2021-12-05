@@ -1,5 +1,4 @@
 language: c++
-install:
-- apt install cmake
+
 script:
 - cmake ./main.cpp
