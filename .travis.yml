@@ -1,5 +1,6 @@
 language: c++
 install:
 - apt install gcc
+- apt install cmake
 script:
 - gcc ./main.cpp
