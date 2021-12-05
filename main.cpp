@@ -24,18 +24,18 @@ struct Queue{
 }; //структура для хранения указателей начала и конца очереди
 
 void init(Queue &Q){
-    Q.BeginQ = NULL;
-    Q.EndQ = NULL;
+    Q.BeginQ = nullptr;
+    Q.EndQ = nullptr;
 } // функция инициализации очереди
 
 bool empty(Queue &Q){
-    return (Q.BeginQ == NULL);
+    return (Q.BeginQ == nullptr);
 } // функция проверки пустоты очереди
 
 void push(int val, Queue &Q){
     digit *p = new digit;
     p->info = val;
-    p->next = NULL;
+    p->next = nullptr;
     if(empty(Q))
         Q.BeginQ = p;
     else
@@ -50,8 +50,8 @@ int pop(Queue &Q){
         p = Q.BeginQ;
         val = Q.BeginQ->info;
         Q.BeginQ = p->next;
-        if (Q.BeginQ == NULL)
-            Q.EndQ = NULL;
+        if (Q.BeginQ == nullptr)
+            Q.EndQ = nullptr;
         delete p;
         return val;
     } else {cout<<"очередь пустая"<<endl;return 0;}
