@@ -1,3 +1,5 @@
 language: c++
+install:
+- apt install gcc
 script:
-- ./main.cpp
+- gcc ./main.cpp
